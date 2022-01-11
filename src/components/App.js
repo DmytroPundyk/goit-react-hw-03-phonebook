@@ -16,7 +16,6 @@ export default class App extends Component {
     filter: '',
   };
   componentDidMount() {
-    // Cчитывает при маунте локальное и записывает в стейт
     const contacts = localStorage.getItem('contacts');
     const parsedContacts = JSON.parse(contacts);
 
