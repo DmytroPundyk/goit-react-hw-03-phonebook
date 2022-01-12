@@ -34,9 +34,9 @@ export default class App extends Component {
   }
 
   addContact = task => {
-    const searchSameName = this.state.contacts
-      .map(cont => cont.name)
-      .includes(task.name);
+    const searchSameName = this.state.contacts.find(
+      contact => contact.name === task.name,
+    );
 
     if (searchSameName) {
       alert(`${task.name} is already in contacts`);
